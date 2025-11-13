@@ -8,7 +8,21 @@
 #let linkedin = "linkedin.com/in/stuxf"
 #let phone = "+91 8250364774"
 #let personal-site = "pugg.in"
-
+#let edu(
+  institution: "",
+  dates: "",
+  degree: "",
+  gpa: "",
+  location: "",
+  consistent: false,
+) = {
+    generic-two-by-two(
+      top-left: strong(institution),
+      top-right: gpa,
+      bottom-left: emph(degree),
+      bottom-right: emph(dates),
+    )
+}
 #show: resume.with(
   author: name,
   // All the lines below are optional.
@@ -44,18 +58,21 @@
 
 #edu(
   institution: "National Institute of Technology, Nagpur",
-  gpa: "8.15",
-  // location: "Nagpur, Maharashtra",
+  location: "Nagpur, Maharashtra",
   dates: dates-helper(start-date: "Aug 2022", end-date: "Jun 2024"),
   degree: "Master of Technology, Computer Science and Engineering",
+  gpa: "CGPA: 8.15",
+  consistent: true,
 )
+- Served as a *Teaching Assistant* for core courses including *Data Structures and Algorithms, IoT, DBMS, and Software Engineering labs*, handling labs, grading, and student support
 
 #edu(
   institution: "Jalpaiguri Government Engineering College",
-  // location: "Jalpaiguri, West Bengal",
-  gpa: "7.87",
+  location: "Jalpaiguri, West Bengal",
   dates: dates-helper(start-date: "Aug 2017", end-date: "Jun 2021"),
   degree: "Bachelor of Technology, Information Technology",
+  gpa: "CGPA: 7.87",
+  consistent: true,
 )
 
 // #edu(
@@ -72,84 +89,61 @@
 == Work Experience
 
 #work(
-  title: "Subatomic Shepherd and Caffeine Connoisseur",
-  location: "Atomville, CA",
-  company: "Microscopic Circus, Schrodinger's University",
-  dates: dates-helper(start-date: "May 2024", end-date: "Present"),
+  title: "Frontend Developer",
+  location: "Bangalore, India",
+  company: "Tata Consultancy Services (TCS)",
+  dates: dates-helper(start-date: "Aug 2024", end-date: "Present"),
 )
-- Played God with tiny molecules, making them dance to uncover the secrets of the universe
-- Convinced high-performance computers to work overtime without unions, reducing simulation time by 50%
-- Wowed a room full of nerds with pretty pictures of invisible things and imaginary findings
+- Contributed to migrating a legacy JavaScript codebase to *Angular 17* with *micro frontend architecture*, improving maintainability, scalability, and reducing technical debt, which led to *~20% faster developer onboarding*
+- Helped build a *reusable component library*, cutting duplicate code by *~30%*, improving consistency, and boosting test coverage to *~80%*, which reduced production regressions by *~25%*
+- Worked on frontend *authentication flows* (JWT handling, session management, route guards), strengthening security for a *10M+ user financial platform*
+- Collaborated in an agile team with designers and senior developers to deliver *accessible (WCAG 2.1 AA)*, responsive, and high-performance applications, improving page load speed by *~20%*
 
-#work(
-  title: "AI Wrangler and Code Ninja",
-  location: "Silicon Mirage, CA",
-  company: "Organic Stupidity Startup",
-  dates: dates-helper(start-date: "Dec 2023", end-date: "Mar 2024"),
-)
-- Taught robots to predict when (and how much!) humans will empty their wallets at the doctor's office
-- Developed HIPAA-compliant digital signatures, because doctors' handwriting wasn't illegible enough already
-- Turned spaghetti code into a gourmet dish, making other interns drool with envy
+// #work(
+//   title: "Subatomic Shepherd and Caffeine Connoisseur",
+//   location: "Atomville, CA",
+//   company: "Microscopic Circus, Schrodinger's University",
+//   dates: dates-helper(start-date: "May 2024", end-date: "Present"),
+// )
+// - Played God with tiny molecules, making them dance to uncover the secrets of the universe
+// - Convinced high-performance computers to work overtime without unions, reducing simulation time by 50%
+// - Wowed a room full of nerds with pretty pictures of invisible things and imaginary findings
 
-#work(
-  title: "Digital Playground Architect",
-  location: "The Cloud",
-  company: "Pixels & Profit Interactive",
-  dates: dates-helper(start-date: "Jun 2020", end-date: "May 2023"),
-)
-- Scaled user base from 10 to 2000+, accidentally becoming a small wealthy nation in the process
-- Crafted Bash scripts so clever they occasionally made other engineers weep with joy
-- Automated support responses, reducing human interaction to a level that would make introverts proud
-- Built a documentation site that actually got read, breaking the ancient RTFM curse
 
-#work(
-  title: "Code Conjurer Intern",
-  location: "Silicon Suburb, CA",
-  company: "Bits & Bytes Consulting",
-  dates: dates-helper(start-date: "Jun 2022", end-date: "Aug 2022"),
+
+== Publications
+
+#generic-one-by-two(
+  left: strong("kMiST: A KD-Tree Based Fast Minimum Spanning Tree Algorithm"),
+  right: emph("IEEE ICCCNT 2024, IIT Mandi"),
 )
-- Developed a cross-platform mobile app that turned every user into a potential paparazzi
-- Led a security overhaul, heroically saving the company from the menace of "password123"
+- Proposed a *KD-Tree–based MST algorithm* with reduced time complexity *O(n log² n)*, achieving *100× speedup* over Prim's on large datasets with *~99% accuracy*
 
 == Projects
 
 #project(
-  name: "Hyperschedule",
-  // Role is optional
-  role: "Maintainer",
-  // Dates is optional
-  dates: dates-helper(start-date: "Nov 2023", end-date: "Present"),
-  // URL is also optional
-  url: "hyperschedule.io",
+  name: "Gofka",
 )
-- Maintain open-source scheduler used by 7000+ users at the Claremont Consortium with TypeScript, React and MongoDB
-  - Manage PR reviews, bug fixes, and coordinate with college for releasing scheduling data and over \$1500 of yearly funding
-- Ensure 99.99% uptime during peak loads of 1M daily requests during course registration through redundant servers
+- Built a *Kafka-like message broker in Go* with append-only logs, segmented storage, indexing and durable writes, achieving *~80k msg/sec ingestion*, *under 10 ms publish latency* and fast crash recovery *under 200 ms* for multi-GB logs
+
+#project(
+  name: "SecureFed: Privacy-Preserving Federated Meta Learning",
+)
+- Built a framework enabling *collaborative model training without sharing data*, using *CKKS homomorphic encryption* for secure computation and *NaCl* for communication security, while preserving accuracy and reducing overhead
+
 
 == Extracurricular Activities
 
-#extracurriculars(
-  activity: "Capture The Flag Competitions",
-  dates: dates-helper(start-date: "Jan 2021", end-date: "Present"),
-)
-- Founder of Les Amateurs (#link("https://amateurs.team")[amateurs.team]), currently ranked \#4 US, \#33 global on CTFTime (2023: \#4 US, \#42 global)
-- Organized AmateursCTF 2023 and 2024, with 1000+ teams solving at least one challenge and \$2000+ in cash prizes
-  - Scaled infrastructure using GCP, Digital Ocean with Kubernetes and Docker; deployed custom software on fly.io
-- Qualified for DEFCON CTF 32 and CSAW CTF 2023, two of the most prestigious cybersecurity competitions globally
 
-// #extracurriculars(
-//   activity: "Science Olympiad Volunteering",
-//   dates: "Sep 2023 --- Present"
-// )
-// - Volunteer and write tests for tournaments, including LA Regionals and SoCal State \@ Caltech
+- Solved *800+ problems* across #link("https://leetcode.com/destx0/")[LeetCode], #link("https://auth.geeksforgeeks.org/user/destbest")[GeeksforGeeks], #link("https://www.hackerrank.com/profile/pulakgh")[HackerRank], and #link("https://codeforces.com/profile/destb")[Codeforces]
+- Achieved *global rank 32* among *3000+ competitors* in #link("https://www.codechef.com/users/destbest")[CodeChef Contest 88C]
 
-// #certificates(
-//   name: "OSCP",
-//   issuer: "Offensive Security",
-//   // url: "",
-//   date: "Oct 2024",
-// )
+
+- Won *Silver Medal* in VNIT intra-college powerlifting competition
+
+
 
 == Skills
-- *Programming Languages*: JavaScript, Python, C/C++, HTML/CSS, Java, Bash, R, Flutter, Dart
-- *Technologies*: React, Astro, Svelte, Tailwind CSS, Git, UNIX, Docker, Caddy, NGINX, Google Cloud Platform
+- *Frontend*: Angular, React, Next.js, TypeScript, JavaScript, HTML5, CSS3, SCSS, RxJS, Micro Frontends
+- *Backend*: Node.js, Express.js, Go, MongoDB, REST APIs, SQL (PostgreSQL, MySQL, SQLite)
+- *Tools*: Git, GitHub, CI/CD, Agile/Scrum, Docker, vim, Linux
