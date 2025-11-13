@@ -1,13 +1,13 @@
 #import "@preview/basic-resume:0.2.9": *
 
 // Put your personal information here, replacing mine
-#let name = "Stephen Xu"
-#let location = "San Diego, CA"
-#let email = "stxu@hmc.edu"
-#let github = "github.com/stuxf"
+#let name = "Pulak Ghosh"
+#let location = "Bangalore, KA"
+#let email = "iampulakghosh@gmail.com"
+#let github = "github.com/destx0"
 #let linkedin = "linkedin.com/in/stuxf"
-#let phone = "+1 (xxx) xxx-xxxx"
-#let personal-site = "stuxf.dev"
+#let phone = "+91 8250364774"
+#let personal-site = "pugg.in"
 
 #show: resume.with(
   author: name,
@@ -17,9 +17,9 @@
   location: location,
   email: email,
   github: github,
-  linkedin: linkedin,
+  // linkedin: linkedin,
   phone: phone,
-  personal-site: personal-site,
+  // personal-site: personal-site,
   accent-color: "#26428b",
   font: "New Computer Modern",
   paper: "us-letter",
@@ -43,16 +43,31 @@
 == Education
 
 #edu(
-  institution: "Harvey Mudd College",
-  location: "Claremont, CA",
-  dates: dates-helper(start-date: "Aug 2023", end-date: "May 2027"),
-  degree: "Bachelor's of Science, Computer Science and Mathematics",
-
-  // Uncomment the line below if you want edu formatting to be consistent with everything else
-  // consistent: true
+  institution: "National Institute of Technology, Nagpur",
+  gpa: "8.15",
+  // location: "Nagpur, Maharashtra",
+  dates: dates-helper(start-date: "Aug 2022", end-date: "Jun 2024"),
+  degree: "Master of Technology, Computer Science and Engineering",
 )
-- Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
-- Relevant Coursework: Data Structures, Program Development, Microprocessors, Abstract Algebra I: Groups and Rings, Linear Algebra, Discrete Mathematics, Multivariable & Single Variable Calculus, Principles and Practice of Comp Sci
+
+#edu(
+  institution: "Jalpaiguri Government Engineering College",
+  // location: "Jalpaiguri, West Bengal",
+  gpa: "7.87",
+  dates: dates-helper(start-date: "Aug 2017", end-date: "Jun 2021"),
+  degree: "Bachelor of Technology, Information Technology",
+)
+
+// #edu(
+//   institution: "National ins",
+//   location: "Claremont, CA",
+//   dates: dates-helper(start-date: "Aug 2023", end-date: "May 2027"),
+//   degree: "Bachelor's of Science, Computer Science and Mathematics",
+//   // Uncomment the line below if you want edu formatting to be consistent with everything else
+//   // consistent: true
+// )
+// - Cumulative GPA: 4.0\/4.0 | Dean's List, Harvey S. Mudd Merit Scholarship, National Merit Scholarship
+// - Relevant Coursework: Data Structures, Program Development, Microprocessors, Abstract Algebra I: Groups and Rings, Linear Algebra, Discrete Mathematics, Multivariable & Single Variable Calculus, Principles and Practice of Comp Sci
 
 == Work Experience
 
