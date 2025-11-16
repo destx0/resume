@@ -135,10 +135,8 @@
 == Extracurricular Activities
 
 
-- Solved *800+ problems* across #link("https://leetcode.com/destx0/")[LeetCode], #link("https://auth.geeksforgeeks.org/user/destbest")[GeeksforGeeks], #link("https://www.hackerrank.com/profile/pulakgh")[HackerRank], and #link("https://codeforces.com/profile/destb")[Codeforces]
-- Achieved *global rank 32* among *3000+ competitors* in #link("https://www.codechef.com/users/destbest")[CodeChef Contest 88C]
-
-
+- Competitive programming: *800+ problems* across LC/GFG/HR/CF
+- CodeChef: *Global Rank 32* among *3000+* in Contest 88C
 - Won *Silver Medal* in VNIT intra-college powerlifting competition
 
 
